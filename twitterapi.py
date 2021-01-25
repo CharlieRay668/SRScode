@@ -69,12 +69,29 @@ def divide_chunks(l, n):
   
 
 def main():
+    # ids = open('2016-pres-geo.txt').readlines()
+    # writer = open("2016-pres-geo-2M.txt", 'w+')
+    # existing_ids = open("2016-pres-geo-1M.txt").readlines()
+    # existing_ids = [i.strip() for i in existing_ids]
+    # ids = [i.strip() for i in ids]
+    # print(len(ids))
+    # #ids = [i for i in ids if i not in existing_ids]
+    # print(len(ids))
+    # x = 0
+    # while x < 1000000:
+    #     curr_id = random.choice(ids)
+    #     if curr_id not in existing_ids:
+    #         writer.write(curr_id + '\n')
+    #         x += 1
+    #         if x%100 == 0:
+    #             print(x)
+
     bearer_token = auth()
-    ids = open('2016-pres-geo-1M.txt').readlines()
+    ids = open('2016-pres-geo-2M.txt').readlines()
     ids = [i.strip() for i in ids]
     indexes = range(1000000)
     indexes_index = 0
-    con = sqlite3.connect(r'tweetdb.sqlite3')
+    con = sqlite3.connect(r'tweetdb2.sqlite3')
     ids = ids[:1000]
     ids = list(divide_chunks(ids, 100))
     total = len(ids)
