@@ -87,7 +87,7 @@ def main():
     #             print(x)
 
     bearer_token = auth()
-    ids = open('2016-pres-geo-2M.txt').readlines()
+    ids = open('2018-con-geo.txt').readlines()
     ids = [i.strip() for i in ids]
     indexes = range(len(ids))
     indexes_index = 0
