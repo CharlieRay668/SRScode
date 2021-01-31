@@ -89,10 +89,9 @@ def main():
     bearer_token = auth()
     ids = open('2016-pres-geo-2M.txt').readlines()
     ids = [i.strip() for i in ids]
-    indexes = range(1000000)
+    indexes = range(len(ids))
     indexes_index = 0
-    con = sqlite3.connect(r'tweetdb2.sqlite3')
-    ids = ids[:1000]
+    con = sqlite3.connect(r'tweet2018.sqlite3')
     ids = list(divide_chunks(ids, 100))
     total = len(ids)
     for index, tweets in enumerate(ids):
