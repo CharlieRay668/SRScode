@@ -1,7 +1,7 @@
 import sqlite3
 from sqlite3 import Error
 
-con = sqlite3.connect(r'tweet2018.sqlite3')
+con = sqlite3.connect(r'tweet2020.sqlite3')
 cur = con.cursor()
 
 sql_table = """ CREATE TABLE IF NOT EXISTS tweet_db (

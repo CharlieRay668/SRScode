@@ -87,11 +87,11 @@ def main():
     #             print(x)
 
     bearer_token = auth()
-    ids = open('2018-con-geo.txt').readlines()
+    ids = open('2020-pres-geo.txt').readlines()
     ids = [i.strip() for i in ids]
     indexes = range(len(ids))
     indexes_index = 0
-    con = sqlite3.connect(r'tweet2018.sqlite3')
+    con = sqlite3.connect(r'tweet2020.sqlite3')
     ids = list(divide_chunks(ids, 100))
     total = len(ids)
     for index, tweets in enumerate(ids):
